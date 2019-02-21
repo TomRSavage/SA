@@ -33,12 +33,11 @@ Produces the following outputs:
 Optimum at: [423.4364436349647, 425.21396324812764]
 Function value at Optimum: 3.044639708296245
 ```
-<p align="center">
-[Trajectory plot, on top of contour of the Schwefel function](GitHub1.png) 
-<p>
-<p align="center">    
-[Function value against iteration.](GitHub2.png)
-<p>
+
+-![](GitHub1.png) 
+ 
+-![](GitHub2.png)
+
     
 ## Authors
 
