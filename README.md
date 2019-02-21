@@ -19,6 +19,7 @@ OUTPUTs
     p_best : optimal point
     f_best : function value at optimum point
  ```
+
 ## Example
 
 With the PlottingUtilities.py, SimulatedAnnealing.py and TestFunctions.py files within the same directory.
@@ -27,9 +28,12 @@ Running the following:
 SimulatedAnnealing([[-200,500],[0,600]],tf.Schwefel,20,100,0.02,plot=True,contour=True)
 ```
 Produces the following outputs:
-```Optimum at: [423.4364436349647, 425.21396324812764]
+```
+Optimum at: [423.4364436349647, 425.21396324812764]
 Function value at Optimum: 3.044639708296245
 ```
+- ![](GitHub1.png)
+- ![](GitHub2.png)
 ## Authors
 
 * **Tom Savage** - *Initial work* - [TomRSavage](https://github.com/TomRSavage)
