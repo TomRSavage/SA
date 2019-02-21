@@ -1,3 +1,4 @@
+# Simulated Annealing within Python
 Simulated Annealing is implimented over an arbitary number of dimensions, and included are utilities for plotting the optimization trajectory as well as function value over time.
 
 ### Prerequisites
@@ -32,8 +33,9 @@ Produces the following outputs:
 Optimum at: [423.4364436349647, 425.21396324812764]
 Function value at Optimum: 3.044639708296245
 ```
-- ![](GitHub1.png)
-- ![](GitHub2.png)
+- ![Trajectory plot, on top of contour of the Schwefel function](GitHub1.png) 
+- ![Function value against iteration.](GitHub2.png)
+
 ## Authors
 
 * **Tom Savage** - *Initial work* - [TomRSavage](https://github.com/TomRSavage)
