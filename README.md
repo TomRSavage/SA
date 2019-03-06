@@ -20,7 +20,11 @@ Initially this will seem counter intuitive: *if the value of the function is gre
 
 However it is this feature of the simulated annealing algorithm which allows it to escape local minima, converging on the global optimum (mostly- discussed later). 
 
-The new *larger* point can be accepted as the new best point with probability:
+The new *larger* point can be accepted as the new best point with probability: ![](CodeCogsEqn(1).gif)
+
+The 'temperature' is then decreased by an amount, and the process repeated. 
+
+As the temperature starts high and then decreases, this results in the best point initially bouncing around the search space, exploring all possibilities. Then as the temperature decreases, the probability of accepting a worse point decreases and the algorithm should (given a large enough initial temperature, and slow enough cooling rate) converge on the global minima.
 
 
 ### Prerequisites
