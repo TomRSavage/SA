@@ -27,7 +27,7 @@ The 'temperature' is then decreased by an amount, and the process repeated.
 As the temperature starts high and then decreases, this results in the best point initially bouncing around the search space, exploring all possibilities. Then as the temperature decreases, the probability of accepting a worse point decreases and the algorithm should (given a large enough initial temperature, and slow enough cooling rate) converge on the global minima.
 
 ### Limitations of current implimentation
-In the current implimentation, the temperature decrease per iteration is set to a constant value. This is known as a *linear* cooling regime. 
+In the current implimentation, the temperature decrease per iteration is defined as a constant value throughout the annealing schedule. This is known as a *linear* cooling regime. Adaptive simulated annealing allows the temperature to decrease as a function of the algorithm progess.
 
 ### Prerequisites
 
