@@ -1,6 +1,28 @@
 # Simulated Annealing within Python
 Simulated Annealing is implimented over an arbitary number of dimensions, and included are utilities for plotting the optimization trajectory as well as function value over time.
 
+## Simulated Annealing Background
+Simulated Annealing is the first stochastic optimization algorithm I have implimented on Python, with it being one of the simplest (initially in it's conception, however many alterations have been added over the years).  
+
+-Describing the basic algorithm:
+The algorithm starts at an initial 'temperature' 
+
+A random 'point' (set of coordinates in 'd' dimensions) is created within the bounds of the function space. 
+
+The function is then evaulated at this point and the point is stored as the 'best' point (as it is the only point). 
+
+Another random point is created and again the function is evaulated on this point, now one of two things can happen. 
+
+First: if the value of the function at the new point is less than the value of the function at the old point (previously the best point), then the new point is then stored as the best point. 
+
+Second: if the value of the function at the new point is greater than the value of the function at the best point, then the new point *might* be accepted at the new best point. 
+Initially this will seem counter intuitive: *if the value of the function is greater and the objective is to minimize the function why would you want the larger value?* 
+
+However it is this feature of the simulated annealing algorithm which allows it to escape local minima, converging on the global optimum (mostly- discussed later). 
+
+The new *larger* point can be accepted as the new best point with probability:
+
+
 ### Prerequisites
 
 Python 3.0 is required. The PlottingUtility.py file must be in the same file as the SimulatedAnnealing.py file in order to enable the utility to be used to plot the trajectory of the function as well as a 2D contour.
