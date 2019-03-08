@@ -83,7 +83,6 @@ def SimulatedAnnealing(bounds,f,temp_it,t,td,plot=False,contour=False):
         print('Optimum at:',p_best),print('Function value at Optimum:',func_val)
     return 
 
-SimulatedAnnealing([[-200,500],[0,600]],tf.Schwefel,20,100,0.02,plot=True,contour=True)
 
 
 
