@@ -54,12 +54,12 @@ OUTPUTs
 With the PlottingUtilities.py, SimulatedAnnealing.py and TestFunctions.py files within the same directory.
 Running the following:
 ```
-SimulatedAnnealing([[-5,5],[-5,5]],Rastrigin,20,5,0.005)
+SimulatedAnnealing([[-5,5],[-5,5]],tf.Rastrigin,20,5,0.005,plot=True,contour=True)
 ```
 Produces the following outputs:
 ```
-Optimum at: [-0.040395594460314044, 0.04851067248285723]
-Function value at Optimum: 0.7852995253771944
+Optimum at: [0.048152768582609085, -0.04759953452627119]
+Function value at Optimum: 0.9027052098431341
 ```
 
 <img src="https://github.com/TomRSavage/SA/blob/master/github1.PNG" width="300"> <img src="https://github.com/TomRSavage/SA/blob/master/github2.PNG" width="350">
