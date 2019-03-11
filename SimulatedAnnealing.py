@@ -10,7 +10,7 @@ from PlottingUtility import trajplot
 import TestFunctions as tf
 
 
-def SimulatedAnnealing(bounds,f,temp_it,t,td,plot=False,contour=False):
+def SimulatedAnnealing(bounds,f,temp_it,t,td,plot=False):
     '''
     SHORT DESCRIPTION OF WHAT THE FUNCTION DOES
 
@@ -22,7 +22,6 @@ def SimulatedAnnealing(bounds,f,temp_it,t,td,plot=False,contour=False):
     t     : initial temperature
     td    : temperature decrease per iteration
     plot : Set to true to display plotting utilities
-    contour :Set to true to display a contour plot underneith trajectory
     
 
 
@@ -70,20 +69,14 @@ def SimulatedAnnealing(bounds,f,temp_it,t,td,plot=False,contour=False):
             f_store[int(storecount)]=f(p_best) #adding new best point to function store
             storecount+=1 #increasing store counter
     func_val=f(p_best) #evaluating function at the 'best'
-    if plot==True and contour==True: #if pplot is needed
-        trajplot(f,bounds,p_store,f_store,contour)
-        print('Optimum at:',p_best),print('Function value at Optimum:',func_val)
-    if plot==True and contour==False:
+    if plot==True:
         trajplot(f,bounds,p_store,f_store)
         print('Optimum at:',p_best),print('Function value at Optimum:',func_val)
-    if plot==False and contour==False:
-        print('Optimum at:',p_best),print('Function value at Optimum:',func_val)
-    if plot==False and contour==True:
-        print('Cannot plot a contour if plot=False!')
+    if plot==False:
         print('Optimum at:',p_best),print('Function value at Optimum:',func_val)
     return 
 
-SimulatedAnnealing([[-5,5],[-5,5]],tf.Rastrigin,20,5,0.005,plot=True,contour=True)
+SimulatedAnnealing([[-5,5],[-5,5]],tf.Rastrigin,50,5,0.005,plot=True)
 
 
 

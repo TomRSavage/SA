@@ -41,8 +41,7 @@ INPUTS
     temp_it: iterations per temperature
     t      : initial temperature
     td     : temperature decrease per iteration
-    plot   : Set to true to display plotting utilities (Only valid for 2 variables)
-    contour: Set to true to display a contour plot underneith trajectory (Only valid for 2 variables)
+    plot   : Set to true to display trajectory plot (Only valid for 2 variables)
     
 OUTPUTs
     p_best : optimal point
@@ -54,7 +53,7 @@ OUTPUTs
 With the PlottingUtilities.py, SimulatedAnnealing.py and TestFunctions.py files within the same directory.
 Running the following:
 ```
-SimulatedAnnealing([[-5,5],[-5,5]],tf.Rastrigin,20,5,0.005,plot=True,contour=True)
+SimulatedAnnealing([[-5,5],[-5,5]],tf.Rastrigin,20,5,0.005,plot=True)
 ```
 Produces the following outputs:
 ```
