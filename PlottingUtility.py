@@ -40,7 +40,7 @@ def trajplot(f,bounds,p_store,f_store):
         plt.plot(p_storeX[i],p_storeY[i],marker='o', markersize=2.5, color=colors[i])
     plt.xlabel('X1')
     plt.ylabel('X2')
-    plt.contourf(x1,x2,z,10,cmap='cool')
+    plt.contourf(x1,x2,z,100,cmap='cool')
     plt.colorbar()
     plt.show()
     it=np.linspace(0,len(f_store),len(f_store))

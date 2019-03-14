@@ -76,7 +76,7 @@ def SimulatedAnnealing(bounds,f,temp_it,t,td,plot=False):
         print('Optimum at:',p_best),print('Function value at Optimum:',func_val)
     return 
 
-SimulatedAnnealing([[-5,5],[-5,5]],tf.Rastrigin,50,5,0.005,plot=True)
+SimulatedAnnealing([[-5,5],[-5,5]],tf.Rastrigin,75,5,0.0025,plot=True)
 
 
 
