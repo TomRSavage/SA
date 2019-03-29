@@ -43,10 +43,8 @@ def SimulatedAnnealing(bounds,f,temp_it,t,td,plot=False):
         p_new[i]=rnd.uniform(bounds[i][0],bounds[i][1]) #random guess
         p_best[i]=p_new[i] #sets initial guess as the best guess
     if plot==True: #if a plot is needed, the variables are set up
-        p_storelength=((t/td)+1) #calculating the length of p_store
-        p_store=[[0]*2 for i in range(int(p_storelength))] #creating empty p_store
-        f_store=[0]*int(p_storelength) #creating function store 
-        storecount=0 #creating iteration count for storing p_best
+        p_store=[] #creating empty p_store
+        f_store=[] #creating function store 
     while t>0: #while the temperature is above 0
         for i in range(temp_it): 
             #per temperature iterates temp_it times looking for best guess
@@ -64,10 +62,8 @@ def SimulatedAnnealing(bounds,f,temp_it,t,td,plot=False):
                     p_best[i]=p_new[i]
         t-=td #decreasing temperature
         if plot==True: #adding p_best for each temperature to p_store
-            for i in range(d):
-                p_store[int(storecount)][i]=p_best[i]
-            f_store[int(storecount)]=f(p_best) #adding new best point to function store
-            storecount+=1 #increasing store counter
+            p_store.append(p_best[:])
+            f_store.append(f(p_best))
     func_val=f(p_best) #evaluating function at the 'best'
     if plot==True:
         trajplot(f,bounds,p_store,f_store)
@@ -76,7 +72,8 @@ def SimulatedAnnealing(bounds,f,temp_it,t,td,plot=False):
         print('Optimum at:',p_best),print('Function value at Optimum:',func_val)
     return 
 
-SimulatedAnnealing([[-5,5],[-5,5]],tf.Rastrigin,75,5,0.0025,plot=True)
+
+SimulatedAnnealing([[-5,5],[-5,5]],tf.Rosenbrock,75,5,0.01,plot=True)
 
 
 
