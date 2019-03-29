@@ -1,9 +1,8 @@
 # Simulated Annealing within Python
 Simulated Annealing is implimented over an arbitary number of dimensions, and included are utilities for plotting the optimization trajectory as well as function value over time.
 
-<p align="center">
-<img src="https://github.com/TomRSavage/SA/blob/master/SAintro.png" width="300">
-</p>
+
+<img align="right" src="https://github.com/TomRSavage/SA/blob/master/SAintro.png" width="300">
 
 ## Simulated Annealing Background
 Simulated Annealing is the first stochastic optimization algorithm I have implimented on Python, with it being one of the simplest (initially in it's conception, however many alterations have been added over the years).  
